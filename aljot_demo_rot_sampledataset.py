@@ -283,9 +283,9 @@ class jdot_align(object):
             dnn.K.set_value(self.gamma, gamma)
 
             # activate the classifier loss 
-            dnn.K.set_value(self.train_cl,1.0)
+#            dnn.K.set_value(self.train_cl,1.0)
 #            dnn.K.set_value(self.source_m,0.0)
-            dnn.K.set_value(self.train_algn,1.0)
+ #           dnn.K.set_value(self.train_algn,1.0)
             
             data = np.vstack((xs_batch, xt_batch))    
             hist= self.model.train_on_batch([data], [np.vstack((ys,l_dummy)), g_dummy])
